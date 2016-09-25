@@ -33,9 +33,9 @@ namespace PHPUPhar {
 
         public function update()
         {
-            $lastVersion = $this->getVersion();
+            $lastVersion = str_replace('.', '', $this->getVersion());
 
-            // if ($lastVersion != $this->versionNow) {
+            // if ($lastVersion != str_replace('.', '', $this->versionNow)) {
                 return $this->updatePhar();
             // }
 
@@ -98,8 +98,8 @@ namespace PHPUPhar {
             while (!$body->eof()) {
                 $version[] = $body->read(1024);
             }
-            $version = trim(implode($version));
-           return str_replace('.', '', $version);
+           return trim(implode($version));
+           // return str_replace('.', '', $version);
         }
     }
 
