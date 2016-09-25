@@ -1,0 +1,27 @@
+{
+    "name": "00f100/phpuphar",
+    "type": "library",
+    "version": "0.1.0",
+    "description": "Library to self update your phar file",
+    "keywords": ["self", "update", "phar", "php"],
+    "homepage": "https://github.com/00f100/phpuphar",
+    "authors": [
+        {
+            "name": "João Moraes",
+            "email": "joaomoraesbr@gmail.com",
+            "homepage": "https://github.com/00f100"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "6.*"
+    },
+    "require-dev": {
+        "00f100/phpdbug": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPUPhar\\": "src/"
+        }
+    }
+}
