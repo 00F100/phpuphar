@@ -54,6 +54,9 @@ namespace PHPUPhar {
                     while (!$body->eof()) {
                         $phar[] = $body->read(10240);
                     }
+                    if(is_file($pharFile)){
+                        unlink($pharFile);
+                    }
                     $phar = implode($phar);
                     $fopen = fopen($pharFile, 'w');
                     fwrite($fopen, $phar);
