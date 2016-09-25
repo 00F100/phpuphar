@@ -54,6 +54,9 @@ namespace PHPUPhar {
                     if(is_file($pharFile)){
                         unlink($pharFile);
                     }
+                    if(is_file($pharFile . '.gz')){
+                        unlink($pharFile . '.gz');
+                    }
                     $phar = implode($phar);
                     $fopen = fopen($pharFile, 'w');
                     fwrite($fopen, $phar);
