@@ -1,5 +1,7 @@
 # PHPUPhar
 
+Library to self update your Phar package 
+
 ## Installation
 
 ```
