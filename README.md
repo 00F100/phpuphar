@@ -1,6 +1,6 @@
 # PHPUPhar
 
-## Instalation
+## Installation
 
 ```
 $ composer require 00f100/phpuphar
